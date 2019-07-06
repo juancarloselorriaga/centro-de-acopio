@@ -1,13 +1,22 @@
+
+//Vista principal
+
 <template>
-  <HelloWorld />
+   <div class="home">
+    <CentrosDeAcopio /> 
+  </div>
 </template>
 
 <script>
-  import HelloWorld from '../components/HelloWorld'
+  
+  import CentrosDeAcopio from "@/components/CentrosDeAcopio";
 
   export default {
     components: {
-      HelloWorld
+      CentrosDeAcopio
     }
   }
 </script>
+
+<style scoped>
+</style>

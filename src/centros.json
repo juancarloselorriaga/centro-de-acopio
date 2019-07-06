@@ -1,0 +1,17 @@
+[{
+    "_id":1,
+    "title":"Fuerte inundación",
+    "description":"Se necesitan víveres por fuerte inundación, deslaves en la zona",
+    "location":"Oaxaca, Oaxaca",
+    "address":"Paseo de los duraznos, no. 133, col. El Ejido",
+    "status":0,
+    "madeBy":"Yerim Morales",
+    "type":"Víveres",
+    "victuals":
+      [
+        "Atun",
+        "Frijoles"
+      ],
+    "phone_number":"5512345678",
+    "flag":1
+  }]
