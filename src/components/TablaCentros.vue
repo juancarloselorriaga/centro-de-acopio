@@ -18,7 +18,7 @@
         <td class="text-xs-center">{{ props.item.flag | flag }}</td>
         <td class="text-xs-center">{{ props.item.type }}</td>
         <td class="text-xs-center">{{ props.item.location }}</td>
-        <td class="text-xs-center">{{ props.item.status }}</td>
+        <td class="text-xs-center">{{ props.item.status | status }}</td>
         <td class="justify-center layout px-0">
           <router-link :to="{name: 'detalle', params: {id: props.item._id}}">
             <v-icon class="mr-2" color="indigo">pageview</v-icon>
@@ -62,9 +62,35 @@ export default {
           description: "Se necesitan víveres por fuerte inundación, deslaves en la zona",
           location: "Oaxaca, Oaxaca",
           address: "Pase lo de los Duraznos, no. 133, Col. El Ejido",
-          flag: 1,
+          flag: 0,
           type: "Víveres",
           status: 0,
+          madeBy: "Yerim Morales",
+          victuals: ["arroz", "frijoles"],
+          phone_number: "5512345678"
+        },
+         {
+          _id: 1234567891,
+          title: "Derrumbe comunidad",
+          description: "Necesitamos herramientas para reconstrucción",
+          location: "Tuxtla Gutierrez, Tabasco",
+          address: "Carretera Federal 133",
+          flag: 1,
+          type: "Herramientas",
+          status: 1,
+          madeBy: "Juan Carlos Elorriaga",
+          victuals: ["arroz", "frijoles"],
+          phone_number: "5512345678"
+        },
+         {
+          _id: 1234567892,
+          title: "Incendio",
+          description: "Se necesitan víveres por fuerte inundación, deslaves en la zona",
+          location: "Guadalajara, Jalisco",
+          address: "Pase lo de los Duraznos, no. 133, Col. El Ejido",
+          flag: 1,
+          type: "Ropa",
+          status: 2,
           madeBy: "Yerim Morales",
           victuals: ["arroz", "frijoles"],
           phone_number: "5512345678"
@@ -85,6 +111,17 @@ export default {
         return "Urgente";
       }
       return "Sin información";
+    },
+    status (estatus) {
+      if(estatus === 0){
+        return 'Sin atención'
+      }
+      else if(estatus === 1){
+        return 'Abierto'
+      }
+      else{
+        return 'Cerrado'
+      }
     }
   },
     mounted(){

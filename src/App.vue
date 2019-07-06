@@ -2,10 +2,10 @@
   <v-app>
     <Navbar />
     <v-content>
-      <v-container fluid fill-height class="indigo lighten-5">
+      <v-container fluid fill-height class="white lighten-5">
         <v-layout row>
           <v-flex xs12>
-            <AppTitle class="mb-3" titulo="Fraternidad para desastres" :contador="1"></AppTitle>
+            <AppTitle class="mb-3" titulo="Fraternidad para desastres" :contador="3"></AppTitle>
             <div class="white rounded-card pa-4">
               <transition name="fade" mode="out-in">
                 <router-view />
